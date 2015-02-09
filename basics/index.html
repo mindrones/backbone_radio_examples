@@ -1,0 +1,94 @@
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Backbone.Radio example</title>
+    <meta name="description" content="Backbone.Radio example">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script src="../node_modules/d3/d3.js"></script>
+    <script src="../node_modules/backbone.radio/node_modules/underscore/underscore.js"></script>
+    <script src="../node_modules/backbone.radio/node_modules/backbone/backbone.js"></script>
+    <script src="../node_modules/backbone.radio/build/backbone.radio.js"></script>
+</head>
+<body>
+
+	<div id="values">
+	</div>
+	
+	<div id="controls">
+	
+		<!-- channels -->
+		
+		<div class="column">
+			<div id="ch1" class="box">
+				<div class="title">Channel 1</div>
+				<div class="button">
+					<p>Trigger <span>ch1:evt1</span></p>
+				</div>
+				<div class="logs"></div>
+			</div>
+			<div id="ch2" class="box">
+				<div class="title">Channel 2</div>
+				<div class="button">
+					<p>Trigger <span>ch2:evt1</span></p>
+				</div>
+				<div class="logs"></div>
+			</div>
+		</div>
+		
+		<!-- trigger listeners -->
+		
+		<div class="column">
+			<div id="tlA" class="box">
+				<div class="title">Listener 1</div>
+				<div class="logs"></div>
+			</div>
+			<div id="tlB" class="box">
+				<div class="title">Listener 2</div>
+				<div class="logs"></div>
+			</div>
+		</div>
+		
+		
+		<!-- commanders -->
+		
+		<div class="column">
+			<div id="com1" class="box com1">
+				<div class="title">Commander 1</div>
+				<div class="button">
+					<p>Command <span>com1->ch1:incrA</span></p>
+				</div>
+				<div class="logs"></div>
+			</div>
+			<div id="com2" class="box com2">
+				<div class="title">Commander 2</div>
+				<div class="button">
+					<p>Command <span>com2->ch2:incrB</span></p>
+				</div>
+				<div class="logs"></div>
+			</div>
+		</div>
+		
+		
+		<!-- requesters -->
+		
+		<div class="column">
+			<div id="req1" class="box req1">
+				<div class="title">Requester 1</div>
+				<div class="button">
+					<p>Request <span>req1->ch1:valueOfA</span></p>
+				</div>
+				<div class="logs"></div>
+			</div>
+			<div id="req2" class="box req2">
+				<div class="title">Requester 2</div>
+				<div class="button">
+					<p>Request <span>req2->ch2:valueOfB</span></p>
+				</div>
+				<div class="logs"></div>
+			</div>
+		</div>
+	</div>
+	
+    <script src="app.js"></script>
+</body>
+</html>
